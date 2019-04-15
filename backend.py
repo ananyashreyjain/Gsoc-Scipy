@@ -11,8 +11,6 @@ class backend:
             
     def set_args(self, arg1, arg2):
         
-        self.arg_dict["arg1"]=arg1
-        self.arg_dict["arg2"]=arg2
         lib["arg1"]=arg1
         lib["arg2"]=arg2
             
@@ -21,9 +19,10 @@ class backend:
         """
         Code for changing the backend
         """
-        self.arg_dict = {"arg1":"default planning_effort",
-                         "arg2":"default threads"}
+        
         lib["library"] = self.backend_library
+        lib["arg1"] = "default planning_effort"
+        lib["arg2"] = "default threads"
 
         return self
         
