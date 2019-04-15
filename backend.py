@@ -20,6 +20,7 @@ class backend:
     
         """
         Code for changing the backend
+        
         """
         self.arg_dict = {"arg1":"default planning_effort",
                          "arg2":"default threads"}
@@ -31,9 +32,17 @@ class backend:
         
         """
         Changing things back to default
+        
         """
     
         lib["library"] = None
         del lib["arg1"]
         del lib["arg2"]
-   
+        
+        
+with backend("pyfftw") as backend_module:
+    backend_module.set_args('FFTW_MEASURE',2)
+    print(lib)
+    
+print(lib)
+        
