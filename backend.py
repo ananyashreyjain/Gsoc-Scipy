@@ -39,7 +39,7 @@ class backend:
         
 with backend("pyfftw") as backend_module:
     backend_module.set_args('FFTW_MEASURE',2)
-    print(lib)
-    
-print(lib)
+    """
+    Code for creating transforms with pyfftw as backend
+    """
         
